@@ -1,3 +1,3 @@
 # xtream-ui
 
-https://github.com/fpemostafa/xtream-ui/blob/main/install.py
+https://raw.githubusercontent.com/fpemostafa/xtream-ui/main/install.py
