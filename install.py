@@ -130,15 +130,7 @@ def update(rType="MAIN"):
 def mysql(rUsername, rPassword):
     global rMySQLCnf
     printc("Configuring MySQL")
-    rCreate = True
-    if os.path.exists("/etc/mysql/my.cnf"):
-        if open("/etc/mysql/my.cnf", "r").read(14) == "# Xtream Codes": rCreate = False
-    if rCreate:
-        shutil.copy("/etc/mysql/my.cnf", "/etc/mysql/my.cnf.xc")
-        rFile = open("/etc/mysql/my.cnf", "w")
-        rFile.write(rMySQLCnf)
-        rFile.close()
-        os.system("service mysql restart > /dev/null")
+    os.system("service mysql restart > /dev/null")
     printc("Enter MySQL Root Password:", col.WARNING)
     for i in range(5):
         rMySQLRoot = raw_input("  ")
